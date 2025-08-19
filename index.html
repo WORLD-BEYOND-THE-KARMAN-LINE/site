@@ -442,6 +442,220 @@
     }
     animateStars();
   </script>
+
+
+<style>
+
+  :root{
+    --btn-size: 64px;
+    --pad: 14px;
+    --z: 9999;
+  }
+  /* Smooth scroll (respects reduced motion) */
+  html:focus-within { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html:focus-within { scroll-behavior: auto; }
+    .rocket * { animation: none !important; transition: none !important; }
+  }
+
+  /* The floating button (no circular background) */
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: var(--btn-size);
+    height: calc(var(--btn-size) + 6px);
+    z-index: var(--z);
+    display: grid;
+    place-items: center;
+    border: 0;
+    padding: var(--pad);
+    background: transparent; /* no circle bg */
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .back-to-top[data-visible="true"]{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .back-to-top:focus-visible{
+    outline: 2px solid #7dd3fc;
+    outline-offset: 4px;
+    border-radius: 14px;
+  }
+
+  /* Tooltip */
+  .back-to-top::after{
+    content: "Back to top";
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 0;
+    font: 600 12px/1.1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    background: rgba(0,0,0,.75);
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transform: translateY(6px);
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .back-to-top:hover::after { opacity: 1; transform: translateY(0); }
+
+  /* Subtle star trail behind rocket (no backdrop) */
+  .trail {
+    position: absolute;
+    width: 1px; height: 1px;
+    top: 70%;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,.7));
+    animation: sparkle 1.8s linear infinite;
+  }
+  @keyframes sparkle {
+    0%   { opacity: 0; transform: translateY(0) translateX(0) scale(1); }
+    10%  { opacity: .9; }
+    100% { opacity: 0; transform: translateY(28px) translateX(-6px) scale(.7); }
+  }
+
+  /* The rocket is perfectly vertical */
+  .rocket {
+    width: 36px; /* scales the whole SVG */
+    display: block;
+  }
+
+  /* Flame flicker + exhaust */
+  .flame {
+    transform-origin: 50% 0%;
+    animation: flameFlicker .12s infinite alternate ease-in-out;
+  }
+  @keyframes flameFlicker {
+    from { transform: scaleY(.9); opacity: .85; }
+    to   { transform: scaleY(1.15); opacity: 1; }
+  }
+
+  .exhaust {
+    opacity: .75;
+    animation: exhaustPulse 1s ease-in-out infinite;
+  }
+  @keyframes exhaustPulse {
+    0%,100% { opacity: .3; }
+    50%     { opacity: .9; }
+  }
+
+  /* Lift on hover */
+  .back-to-top:hover .rocket-wrap{
+    transform: translateY(-6px);
+  }
+  .rocket-wrap {
+    transition: transform .25s ease;
+    position: relative;
+  }
+
+  /* Tiny shimmer on body */
+  .shine {
+    animation: shine 2.4s ease-in-out infinite;
+  }
+  @keyframes shine {
+    0%,100% { opacity: .15; }
+    50%     { opacity: .45; }
+  }
+
+  /* Optional: adapt for dark themes */
+  @media (prefers-color-scheme: dark){
+    .back-to-top::after{ background: rgba(255,255,255,.12); color: #e5e7eb; }
+  }
+</style>
+<!-- Back to Top Button -->
+<button id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top"
+        title="Back to top"
+        type="button">
+  <!-- Star sparkles (generated via box-shadows for multiple stars) -->
+  <span class="trail" aria-hidden="true"
+        style="box-shadow:
+          -2px 2px 0 0 #fff,
+          -6px 8px 0 0 #cfe8ff,
+          -10px 16px 0 0 #ffffff,
+          -14px 22px 0 0 #dbeafe,
+          -18px 30px 0 0 #fff;"></span>
+
+  <span class="rocket-wrap" aria-hidden="true">
+    <!-- Inline SVG Rocket (upright) -->
+    <svg class="rocket" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rocket">
+      <!-- Nose cone -->
+      <path d="M32 4 C38 14, 42 22, 42 28 L22 28 C22 22, 26 14, 32 4Z" fill="#94a3b8"/>
+      <!-- Body -->
+      <rect x="22" y="28" width="20" height="32" rx="10" fill="#e2e8f0" />
+      <!-- Window -->
+      <circle cx="32" cy="42" r="6" fill="#0ea5e9" />
+      <circle class="shine" cx="29.5" cy="39.5" r="2" fill="#ffffff"/>
+      <!-- Fins -->
+      <path d="M22 48 L14 58 L22 56 Z" fill="#64748b"/>
+      <path d="M42 48 L50 58 L42 56 Z" fill="#64748b"/>
+      <!-- Engine bell -->
+      <rect x="26" y="60" width="12" height="8" rx="2" fill="#94a3b8"/>
+      <!-- Exhaust glow -->
+      <ellipse class="exhaust" cx="32" cy="74" rx="8" ry="4" fill="url(#glow)"/>
+
+      <!-- Flame (flicker) -->
+      <path class="flame"
+            d="M32 68
+               C 27 74, 29 80, 32 86
+               C 35 80, 37 74, 32 68 Z"
+            fill="url(#flameGrad)"/>
+
+      <!-- Definitions -->
+      <defs>
+        <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(32 74) rotate(90) scale(6 10)">
+          <stop offset="0" stop-color="#fde68a" stop-opacity="0.7"/>
+          <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="flameGrad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(32 76) rotate(90) scale(12 8)">
+          <stop offset="0" stop-color="#fff7ed"/>
+          <stop offset="0.35" stop-color="#fde68a"/>
+          <stop offset="0.7" stop-color="#f97316"/>
+          <stop offset="1" stop-color="#ef4444"/>
+        </radialGradient>
+      </defs>
+    </svg>
+  </span>
+</button>
+
+<script>
+  (function(){
+    const btn = document.getElementById('backToTop');
+    const THRESHOLD = 400; // px scrolled before showing
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // show/hide on scroll
+    const onScroll = () => {
+      const visible = window.scrollY > THRESHOLD;
+      btn.setAttribute('data-visible', visible ? 'true' : 'false');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // click to top
+    btn.addEventListener('click', () => {
+      if (prefersReduced) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    // keyboard accessibility (Enter/Space already work on <button>)
+  })();
+</script>
+
+
   <main>
     <div class="hero" id="home">
       <div class="hero-title">WELCOME TO WORLD BEYOND THE KARMAN LINE</div>
