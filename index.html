@@ -167,7 +167,7 @@
       text-align: center;
       margin-bottom: 1.5rem;
     }
-    /* About the Author section */
+    /* About the Author section 
     #author .author-list {
       display: flex;
       flex-direction: column;
@@ -201,7 +201,7 @@
       margin-top: 1.2rem;
       color: #b0b9c6;
       font-size: 0.98rem;
-    }
+    }*/
     /* Download section magazine list */
     .magazine-list {
       display: flex;
@@ -361,7 +361,8 @@
       <a href="#home" class="active">Home</a>
       <a href="#about">About Us</a>
       <a href="#download">Download</a>
-      <a href="#author">Our Team</a>
+      <!--a href="#author">Our Team</a-->
+      <a href="#collaborators">Our Collaborators</a>
       <a href="#contact">Contact Us</a>
     </nav>
   </header>
@@ -568,6 +569,236 @@
   @media (prefers-color-scheme: dark){
     .back-to-top::after{ background: rgba(255,255,255,.12); color: #e5e7eb; }
   }
+  /* --- Collaborators Section --- 
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0.6rem auto 0;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin: 1.5rem 0 2rem;
+}
+.controls input,
+.controls select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.controls input:focus,
+.controls select:focus {
+  outline: 2px solid var(--accent);
+}
+.chip {
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: #000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+.role {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.bio {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+.tags {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 0.6rem;
+}
+.links a {
+  margin: 0 0.3rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+.links a:hover {
+  color: #fff;
+}
+.empty {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+}*/
+
+
+/* Collaborators section */
+#collaborators .hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#collaborators .hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+#collaborators .hero-sub {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+#collaborators .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+#collaborators .controls input,
+#collaborators .controls select,
+#collaborators .controls button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+#collaborators .controls button.chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+#collaborators .grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+#collaborators .card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s;
+}
+#collaborators .card:hover {
+  transform: translateY(-6px);
+}
+#collaborators .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+#collaborators .name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+#collaborators .role {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.6rem;
+}
+#collaborators .bio {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+#collaborators .socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+#collaborators .socials a {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+  transition: fill 0.2s;
+}
+#collaborators .socials a:hover {
+  fill: #fff;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(32,183,255,.25);
+  background: rgba(36,44,60,.5);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.icon:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: rgba(32,183,255,.12);
+}
+
+.icon svg {
+  width: 18px;   /* control size */
+  height: 18px;  /* control size */
+  fill: var(--accent);
+}
+
 </style>
 <!-- Back to Top Button -->
 <button id="backToTop"
@@ -719,7 +950,7 @@
         Our mission is to make space science accessible and exciting for everyone. Join us as we explore the wonders of the universe, one issue at a time!-->
       </p>
     </section>
-    <section id="author">
+    <!--section id="author">
       <h2 style="color:#20b7ff; margin-bottom:1rem; font-size:1.3rem; letter-spacing:1px;">Our Team</h2>
       <div class="author-list">
         <div class="author-profile">
@@ -755,11 +986,53 @@
       <div class="author-note">
         Together, we strive to bring you the latest discoveries, stories, and visuals from the world beyond the Karman line!
       </div>
-    </section>
-    <section id="contact">
+    </section-->
+
+<!-- OUR COLLABORATORS SECTION -->
+<section id="collaborators" class="section">
+  <div class="hero">
+    <div class="hero-title">Our Collaborators</div>
+    <div class="hero-sub">
+      The brilliant minds contributing articles, illustrations, research, reviews and more to
+      <strong>World Beyond the Karman Line</strong>.
+    </div>
+  </div>
+
+  <h2>Explore Collaborators</h2>
+
+  <!-- Controls -->
+  <div class="controls" role="group" aria-label="Collaborator filters">
+    <input id="search" type="text" placeholder="Search by name, role, or tags…" aria-label="Search collaborators" />
+    <select id="sort" aria-label="Sort collaborators">
+      <option value="name-asc">Name (A → Z)</option>
+      <option value="name-desc">Name (Z → A)</option>
+      <option value="role-asc">Role (A → Z)</option>
+      <option value="role-desc">Role (Z → A)</option>
+    </select>
+    <button class="chip" data-chip="writer" aria-pressed="false">Writers</button>
+    <button class="chip" data-chip="editor" aria-pressed="false">Editors</button>
+    <button class="chip" data-chip="illustrator" aria-pressed="false">Illustrators</button>
+    <button class="chip" data-chip="reviewer" aria-pressed="false">Reviewers</button>
+  </div>
+
+  <div id="grid" class="grid" aria-live="polite" aria-busy="false"></div>
+  <div id="empty" class="empty" hidden>No collaborators match your filters.</div>
+
+  <div class="cta" style="margin-top:2rem;">
+    <h2>Want to Collaborate?</h2>
+    <p style="max-width:800px;margin:.4rem auto 0;line-height:1.6;">
+      We welcome articles, illustrations, data visualizations, interviews, and classroom activities.  
+      Email us at
+      <a href="mailto:worldbeyondthekarmanline@gmail.com" style="color:var(--accent);font-weight:700;text-decoration:underline;">
+        worldbeyondthekarmanline@gmail.com
+      </a>
+      with your portfolio or pitch.
+    </p>
+  </div>
+</section>
+<section id="contact">
       <h2>Contact Us</h2>
-      <p>
-        Have questions, suggestions, or want to contribute? Reach out to us at:<br><br>
+      <p>Have questions, suggestions, or feedback? <br>Reach out to us at:<br><br>
         <a href="mailto:worldbeyondthekarmanline@gmail.com" style="color:#20b7ff;font-weight:bold;text-decoration:underline;">
           worldbeyondthekarmanline@gmail.com
         </a>
@@ -782,7 +1055,7 @@
       hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
     });
     // Highlight active nav link on scroll
-    const sections = ['home', 'about', 'download', 'author', 'contact'];
+    const sections = ['home', 'about', 'download', 'collaborators', 'contact'];
     window.addEventListener('scroll', () => {
       let scrollPos = window.scrollY + 80;
       sections.forEach(id => {
@@ -837,6 +1110,542 @@
       //.catch(() => {
         //document.getElementById('visits').textContent = 'N/A';
   //    });//
+
+// ---- Collaborators data ----
+/*const COLLABS = [
+  {
+    name: "Anurag Saikia",
+    role: "Founder, Editor-in-chief",
+    bio: "Focuses on spaceflight history & policy.",
+    avatar: "https://i.pravatar.cc/100?img=68",
+    tags: ["writer", "editor"],
+    links: {
+      linkedin: "https://www.linkedin.com/in/anurag-saikia-2009nlp07/",
+      email: "mailto:anurag.saikia.7.axom@gmail.com",
+      twitter: "https://x.com/Anuraagsaikia07"
+    }
+  },
+  {
+    name: "Rahul Mehta",
+    role: "Illustrator",
+    bio: "Creates infographics & cover art.",
+    avatar: "https://i.pravatar.cc/100?img=12",
+    tags: ["illustrator"],
+    links: {
+      instagram: "#",
+      email: "mailto:rahul@example.com"
+    }
+  },
+  {
+    name: "Sofia Lee",
+    role: "Editor",
+    bio: "Ensures scientific accuracy & clarity.",
+    avatar: "https://i.pravatar.cc/100?img=47",
+    tags: ["editor"],
+    links: {
+      linkedin: "#"
+    }
+  },
+  {
+    name: "Rahul Mehta",
+    role: "Illustrator",
+    bio: "Creates infographics & cover art.",
+    avatar: "https://i.pravatar.cc/100?img=12",
+    tags: ["illustrator"],
+    links: {
+      instagram: "#",
+      email: "mailto:rahul@example.com"
+    }
+  },  
+  {
+    name: "Rahul Mehta",
+    role: "Illustrator",
+    bio: "Creates infographics & cover art.",
+    avatar: "https://i.pravatar.cc/100?img=12",
+    tags: ["illustrator"],
+    links: {
+      instagram: "#",
+      email: "mailto:rahul@example.com"
+    }
+  },  
+  {
+    name: "Rahul Mehta",
+    role: "Illustrator",
+    bio: "Creates infographics & cover art.",
+    avatar: "https://i.pravatar.cc/100?img=12",
+    tags: ["illustrator"],
+    links: {
+      instagram: "#",
+      email: "mailto:rahul@example.com"
+    }
+  },
+];
+
+// ---- Renderer ----
+function render(collabs) {
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  grid.innerHTML = "";
+  if (collabs.length === 0) {
+    empty.hidden = false;
+    return;
+  }
+  empty.hidden = true;
+  collabs.forEach(c => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${c.avatar}" alt="${c.name}" class="avatar" loading="lazy">
+      <div class="name">${c.name}</div>
+      <div class="role">${c.role}</div>
+      <div class="bio">${c.bio}</div>
+      <div class="tags">${c.tags.join(", ")}</div>
+      <div class="links">
+        ${c.links.linkedin ? `<a href="${c.links.linkedin}" target="_blank" aria-label="LinkedIn">X</a>` : ""}
+        ${c.links.twitter ? `<a href="${c.links.twitter}" target="_blank" aria-label="Twitter">🐦</a>` : ""}
+        ${c.links.instagram ? `<a href="${c.links.instagram}" target="_blank" aria-label="Instagram"></a>` : ""}
+        ${c.links.github ? `<a href="${c.links.github}" target="_blank" aria-label="GitHub">💻</a>` : ""}
+        ${c.links.email ? `<a href="${c.links.email}" aria-label="Email">✉</a>` : ""}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ---- Controls ----
+const search = document.getElementById("search");
+const sort = document.getElementById("sort");
+const chips = document.querySelectorAll(".chip");
+let activeChips = [];
+
+function applyFilters() {
+  let filtered = [...COLLABS];
+  const q = search.value.toLowerCase();
+  if (q) {
+    filtered = filtered.filter(c =>
+      c.name.toLowerCase().includes(q) ||
+      c.role.toLowerCase().includes(q) ||
+      c.tags.some(t => t.toLowerCase().includes(q))
+    );
+  }
+  if (activeChips.length) {
+    filtered = filtered.filter(c => activeChips.some(tag => c.tags.includes(tag)));
+  }
+  const [field, dir] = sort.value.split("-");
+  filtered.sort((a,b) => {
+    const A = a[field].toLowerCase(), B = b[field].toLowerCase();
+    if (A < B) return dir==="asc"?-1:1;
+    if (A > B) return dir==="asc"?1:-1;
+    return 0;
+  });
+  render(filtered);
+}
+
+search.addEventListener("input", applyFilters);
+sort.addEventListener("change", applyFilters);
+chips.forEach(chip => chip.addEventListener("click", () => {
+  const t = chip.dataset.chip;
+  if (activeChips.includes(t)) {
+    activeChips = activeChips.filter(x => x!==t);
+    chip.setAttribute("aria-pressed","false");
+  } else {
+    activeChips.push(t);
+    chip.setAttribute("aria-pressed","true");
+  }
+  applyFilters();
+}));
+
+// Initial render
+render(COLLABS);*/
+// ---- Collaborators data + renderer ----
+/*const COLLABS = [
+  {
+    name: "Jane Doe",
+    role: "Writer",
+    bio: "Writes on space policy and ethics.",
+    avatar: "https://via.placeholder.com/80",
+    links: {
+      linkedin: "https://linkedin.com/in/janedoe",
+      email: "mailto:jane@example.com",
+      twitter: "https://twitter.com/janedoe",
+      instagram: "https://instagram.com/janedoe",
+      github: "",
+      website: ""
+    }
+  }
+];
+
+// SVG icons
+const ICONS = {
+  linkedin: `<svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76..."/></svg>`,
+  email: `<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1..."/></svg>`,
+  twitter: `<svg viewBox="0 0 24 24"><path d="M22.46 6c-.77..."/></svg>`,
+  instagram: `<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2..."/></svg>`,
+  github: `<svg viewBox="0 0 24 24"><path d="M12 0C5.37..."/></svg>`,
+  website: `<svg viewBox="0 0 24 24"><path d="M12 4a8 8..."/></svg>`
+};
+
+const grid = document.getElementById("grid");
+const empty = document.getElementById("empty");
+const search = document.getElementById("search");
+const sortSel = document.getElementById("sort");
+const chips = document.querySelectorAll(".chip");
+
+let activeChips = new Set();
+
+function render() {
+  let list = [...COLLABS];
+
+  const q = search.value.trim().toLowerCase();
+  if (q) list = list.filter(c =>
+    c.name.toLowerCase().includes(q) ||
+    c.role.toLowerCase().includes(q) ||
+    (c.bio && c.bio.toLowerCase().includes(q))
+  );
+
+  if (activeChips.size) list = list.filter(c =>
+    [...activeChips].some(tag => c.role.toLowerCase().includes(tag))
+  );
+
+  const [key, dir] = sortSel.value.split("-");
+  list.sort((a,b)=> (a[key] > b[key] ? 1 : -1) * (dir==="asc"?1:-1));
+
+  grid.innerHTML = "";
+  if (!list.length) { empty.hidden = false; return; }
+  empty.hidden = true;
+
+  for (const c of list) {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <img src="${c.avatar}" alt="${c.name}" class="avatar" loading="lazy">
+      <div class="name">${c.name}</div>
+      <div class="role">${c.role}</div>
+      <div class="bio">${c.bio||""}</div>
+      <div class="socials">
+        ${Object.entries(c.links).map(([k,v]) =>
+          v ? `<a href="${v}" target="_blank" rel="noopener" aria-label="${k}">${ICONS[k]}</a>` : ""
+        ).join("")}
+      </div>`;
+    grid.appendChild(div);
+  }
+}
+
+search.addEventListener("input", render);
+sortSel.addEventListener("change", render);
+chips.forEach(btn => btn.addEventListener("click", ()=>{
+  const tag = btn.dataset.chip;
+  if (activeChips.has(tag)) { activeChips.delete(tag); btn.setAttribute("aria-pressed","false"); }
+  else { activeChips.add(tag); btn.setAttribute("aria-pressed","true"); }
+  render();
+}));
+
+render();*/
+
+/*  const COLLABS = [
+    {
+      name: "Jane Doe",
+      role: "Writer",
+      bio: "Writes cosmic stories and essays for the magazine.",
+      avatar: "https://i.pravatar.cc/150?img=1",
+      socials: {
+        twitter: "https://twitter.com/username",
+        email: "mailto:jane@example.com",
+        instagram: "https://instagram.com/username",
+        linkedin: "https://linkedin.com/in/username"
+      },
+      tags: ["writer"]
+    },
+    {
+      name: "John Smith",
+      role: "Editor",
+      bio: "Ensures every edition meets top editorial standards.",
+      avatar: "https://i.pravatar.cc/150?img=2",
+      socials: {
+        github: "https://github.com/username",
+        website: "https://example.com"
+      },
+      tags: ["editor"]
+    }
+  ];
+
+  const grid = document.getElementById("collaboratorsGrid");
+  const search = document.getElementById("searchCollaborators");
+  const sort = document.getElementById("sortCollaborators");
+  const filters = document.querySelectorAll(".filter-btn");
+
+  const ICONS = {
+    twitter: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.33 5.72 4.25 4.25 0 01-1.94-.54v.06a4.28 4.28 0 003.44 4.19c-.47.13-.97.2-1.49.2-.36 0-.72-.03-1.06-.1a4.28 4.28 0 004 2.98 8.59 8.59 0 01-5.32 1.83c-.35 0-.7-.02-1.05-.06A12.11 12.11 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.53A8.33 8.33 0 0022.46 6z"/></svg>`,
+    email: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l8 6 8-6V18H4z"/></svg>`,
+    instagram: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>`,
+    linkedin: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 107.5 6a2.5 2.5 0 00-2.52-2.5zM3 8h4v13H3zM9 8h3.8v1.8h.05A4.2 4.2 0 0121 13v8h-4v-7.2c0-1.7-.6-2.9-2.2-2.9-1.2 0-2 .8-2.3 1.6-.1.3-.1.7-.1 1V21H9z"/></svg>`,
+    github: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.4 7.86 10.94.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.55-3.88-1.55-.52-1.3-1.27-1.65-1.27-1.65-1.04-.72.08-.7.08-.7 1.15.08 1.75 1.19 1.75 1.19 1.02 1.75 2.68 1.25 3.33.95.1-.74.4-1.25.72-1.54-2.55-.3-5.23-1.27-5.23-5.65 0-1.25.45-2.26 1.19-3.05-.12-.3-.52-1.52.12-3.17 0 0 .97-.31 3.18 1.18a11.1 11.1 0 015.78 0c2.2-1.49 3.17-1.18 3.17-1.18.65 1.65.25 2.87.12 3.17.74.79 1.19 1.8 1.19 3.05 0 4.39-2.69 5.35-5.25 5.65.41.36.77 1.08.77 2.18v3.22c0 .31.21.66.79.56A10.98 10.98 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>`,
+    website: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.15 0 2.22.3 3.15.82A8 8 0 0112 20a8 8 0 01-3.15-15.18A7.96 7.96 0 0112 4z"/></svg>`
+  };
+
+  function renderGrid() {
+    const query = search.value.toLowerCase();
+    const sortValue = sort.value;
+    const activeFilter = document.querySelector(".filter-btn.active")?.dataset.filter;
+
+    let collabs = COLLABS.filter(c => 
+      c.name.toLowerCase().includes(query) ||
+      c.role.toLowerCase().includes(query) ||
+      c.tags.some(t => t.includes(query))
+    );
+
+    if (activeFilter && activeFilter !== "all") {
+      collabs = collabs.filter(c => c.tags.includes(activeFilter));
+    }
+
+    if (sortValue === "name") collabs.sort((a, b) => a.name.localeCompare(b.name));
+    if (sortValue === "role") collabs.sort((a, b) => a.role.localeCompare(b.role));
+
+    grid.innerHTML = collabs.map(c => `
+      <div class="collab-card">
+        <img src="${c.avatar}" alt="${c.name}" loading="lazy"/>
+        <h3>${c.name}</h3>
+        <p class="role">${c.role}</p>
+        <p class="bio">${c.bio}</p>
+        <div class="socials">
+          ${Object.entries(c.socials).map(([key, url]) => url ? `
+            <a href="${url}" target="_blank" rel="noopener" aria-label="${key}">
+              ${ICONS[key] || ""}
+            </a>
+          ` : "").join("")}
+        </div>
+      </div>
+    `).join("");
+  }
+
+  search.addEventListener("input", renderGrid);
+  sort.addEventListener("change", renderGrid);
+  filters.forEach(btn => btn.addEventListener("click", () => {
+    filters.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderGrid();
+  }));
+
+  renderGrid();*/
+
+// --- Collaborators Data ---
+/*const COLLABS = [
+  {
+    name: "Jane Doe",
+    role: "Editor",
+    bio: "Loves crafting engaging stories and ensuring quality.",
+    avatar: "https://via.placeholder.com/150",
+    twitter: "https://twitter.com/janedoe",
+    email: "mailto:jane@example.com",
+    instagram: "https://instagram.com/jane",
+    linkedin: "https://linkedin.com/in/janedoe",
+    github: "",
+    website: "",
+    tags: ["editor", "writer"]
+  },
+  {
+    name: "John Smith",
+    role: "Illustrator",
+    bio: "Passionate about blending science with art.",
+    avatar: "https://via.placeholder.com/150",
+    twitter: "",
+    email: "mailto:john@example.com",
+    instagram: "https://instagram.com/johnart",
+    linkedin: "",
+    github: "",
+    website: "https://johnsmith.com",
+    tags: ["illustrator"]
+  }
+];
+
+// --- Icon Templates ---
+function getIcon(type, link) {
+  if (!link) return "";
+  const icons = {
+    twitter: `<a href="${link}" aria-label="Twitter" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.33 5.72 4.25 4.25 0 01-1.94-.54v.06a4.28 4.28 0 003.44 4.19c-.47.13-.97.2-1.49.2-.36 0-.72-.03-1.06-.1a4.28 4.28 0 004 2.98 8.59 8.59 0 01-5.32 1.83c-.35 0-.7-.02-1.05-.06A12.11 12.11 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.53A8.33 8.33 0 0022.46 6z"/>
+      </svg>
+    </a>`,
+    email: `<a href="${link}" aria-label="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l8 6 8-6V18H4z"/>
+      </svg>
+    </a>`,
+    instagram: `<a href="${link}" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/>
+      </svg>
+    </a>`,
+    linkedin: `<a href="${link}" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zm-11 19H5V9h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75S5.53 4.2 6.5 4.2s1.75.79 1.75 1.75S7.47 7.7 6.5 7.7zM20 19h-3v-5.4c0-1.29-.47-2.16-1.64-2.16-0.9 0-1.43.61-1.66 1.2-.09.22-.11.52-.11.82V19h-3s.04-9 0-10h3v1.4c.4-.62 1.11-1.52 2.7-1.52 1.97 0 3.45 1.29 3.45 4.06V19z"/>
+      </svg>
+    </a>`,
+    github: `<a href="${link}" aria-label="GitHub" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.07 10.95c.59.11.8-.26.8-.58v-2.02c-3.28.71-3.97-1.58-3.97-1.58-.54-1.36-1.33-1.72-1.33-1.72-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.23 1.83 1.23 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.62-.3-5.38-1.31-5.38-5.84 0-1.29.47-2.35 1.23-3.18-.12-.3-.53-1.52.12-3.16 0 0 .99-.32 3.25 1.21a11.3 11.3 0 015.91 0c2.26-1.53 3.25-1.21 3.25-1.21.65 1.64.24 2.86.12 3.16.76.83 1.23 1.89 1.23 3.18 0 4.55-2.77 5.54-5.41 5.83.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.81.58A11.5 11.5 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+      </svg>
+    </a>`,
+    website: `<a href="${link}" aria-label="Website" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C6.486 2 2 6.487 2 12c0 5.514 4.486 10 10 10s10-4.486 10-10c0-5.513-4.486-10-10-10zm0 2c1.598 0 3.065.516 4.26 1.388L6.388 15.26A7.94 7.94 0 014 12c0-4.411 3.589-8 8-8zm0 16c-1.598 0-3.065-.516-4.26-1.388L17.612 8.74A7.94 7.94 0 0120 12c0 4.411-3.589 8-8 8z"/>
+      </svg>
+    </a>`
+  };
+  return icons[type] || "";
+}
+
+// --- Render Grid ---
+function renderGrid() {
+  const grid = document.getElementById("collabGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  COLLABS.forEach(c => {
+    const card = document.createElement("div");
+    card.className = "collab-card";
+    card.innerHTML = `
+      <img src="${c.avatar}" alt="${c.name}">
+      <h3>${c.name}</h3>
+      <p class="role">${c.role}</p>
+      <p class="bio">${c.bio}</p>
+      <div class="socials">
+        ${getIcon("twitter", c.twitter)}
+        ${getIcon("email", c.email)}
+        ${getIcon("instagram", c.instagram)}
+        ${getIcon("linkedin", c.linkedin)}
+        ${getIcon("github", c.github)}
+        ${getIcon("website", c.website)}
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// --- Init ---
+document.addEventListener("DOMContentLoaded", renderGrid);*/
+
+
+  // -------------------------------------------- Collaborators data ---------------------------------------
+  const COLLABS = [
+    {
+      name: 'Anurag Saikia',
+      role: 'Founder & Chief Editor',
+      bio: 'Curates each issue to inspire curiosity and wonder about the universe.',
+      avatar: 'https://s6.imgcdn.dev/YIgbtK.jpg',
+      roleTags: ['editor'],
+      links: {
+        twitter: 'https://x.com/Anuraagsaikia07',
+        email: 'worldbeyondthekarmanline@gmail.com',
+        instagram: 'https://instagram.com/__anurag___saikia__',
+        linkedin: 'https://www.linkedin.com/in/anurag-saikia-2009nlp07/',
+        github: 'https://github.com/anurag90-tech',
+        website: ''
+      }
+    },
+    {
+      name: 'A. Sharma',
+      role: 'Astrophysics Writer',
+      bio: 'Writes explainer articles on exoplanets, spectroscopy, and stellar evolution.',
+      avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+      roleTags: ['writer'],
+      links: { twitter: 'https://twitter.com/', email: '', instagram: '', linkedin: '#', github: '', website: '' }
+    }
+  ];
+
+  // --- SVG Icon generator ---
+  function getIcon(type, link) {
+    if (!link) return '';
+    const icons = {
+      twitter: `<a href="${link}" target="_blank" aria-label="Twitter" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.33 5.72 4.25 4.25 0 01-1.94-.54v.06a4.28 4.28 0 003.44 4.19c-.47.13-.97.2-1.49.2-.36 0-.72-.03-1.06-.1a4.28 4.28 0 004 2.98 8.59 8.59 0 01-5.32 1.83c-.35 0-.7-.02-1.05-.06A12.11 12.11 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.53A8.33 8.33 0 0022.46 6z"/></svg>
+      </a>`,
+      email: `<a href="mailto:${link}" aria-label="Email" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.99l8 6 8-6V18H4z"/></svg>
+      </a>`,
+      instagram: `<a href="${link}" target="_blank" aria-label="Instagram" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-2.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+      </a>`,
+      linkedin: `<a href="${link}" target="_blank" aria-label="LinkedIn" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V9h3v10zm-1.5-11.3C5.53 7.7 4.75 6.91 4.75 5.95S5.53 4.2 6.5 4.2 8.25 5 8.25 5.95 7.47 7.7 6.5 7.7zM20 19h-3v-5.4c0-1.29-.47-2.16-1.64-2.16-.9 0-1.43.61-1.66 1.2-.09.22-.11.52-.11.82V19h-3s.04-9 0-10h3v1.4c.4-.62 1.11-1.52 2.7-1.52 1.97 0 3.45 1.29 3.45 4.06V19z"/></svg>
+      </a>`,
+      github: `<a href="${link}" target="_blank" aria-label="GitHub" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.07 10.95c.59.11.8-.26.8-.58v-2.02c-3.28.71-3.97-1.58-3.97-1.58-.54-1.36-1.33-1.72-1.33-1.72-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.23 1.83 1.23 1.07 1.84 2.81 1.31 3.5 1.01.11-.78.42-1.31.76-1.61-2.62-.3-5.38-1.31-5.38-5.84 0-1.29.47-2.35 1.23-3.18-.12-.3-.53-1.52.12-3.16 0 0 .99-.32 3.25 1.21a11.3 11.3 0 015.91 0c2.26-1.53 3.25-1.21 3.25-1.21.65 1.64.24 2.86.12 3.16.76.83 1.23 1.89 1.23 3.18 0 4.55-2.77 5.54-5.41 5.83.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.81.58A11.5 11.5 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+      </a>`,
+      website: `<a href="${link}" target="_blank" aria-label="Website" class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+      </a>`
+    };
+    return icons[type] || '';
+  }
+
+  // --- Render card ---
+  function cardHTML(p) {
+    return `
+      <article class="card">
+        <img class="avatar" src="${p.avatar}" alt="${p.name}" loading="lazy" />
+        <div>
+          <div class="name">${p.name}</div>
+          <div class="role">${p.role}</div>
+          ${p.bio ? `<div class="bio">${p.bio}</div>` : ''}
+          <div class="links">
+            ${getIcon('twitter', p.links.twitter)}
+            ${getIcon('email', p.links.email)}
+            ${getIcon('instagram', p.links.instagram)}
+            ${getIcon('linkedin', p.links.linkedin)}
+            ${getIcon('github', p.links.github)}
+            ${getIcon('website', p.links.website)}
+          </div>
+        </div>
+      </article>`;
+  }
+
+  // --- Apply filters/search ---
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const search = document.getElementById('search');
+  const sortSel = document.getElementById('sort');
+  const chips = Array.from(document.querySelectorAll('.chip'));
+
+  function normalize(s){ return (s||'').toLowerCase(); }
+
+  function apply(){
+    grid.setAttribute('aria-busy','true');
+    const q = normalize(search.value);
+    const activeTags = chips.filter(c => c.getAttribute('aria-pressed')==='true').map(c => c.dataset.chip);
+
+    let list = COLLABS.filter(p => {
+      const hay = `${p.name} ${p.role} ${p.bio} ${(p.roleTags||[]).join(' ')}`.toLowerCase();
+      const matchesQ = hay.includes(q);
+      const matchesTag = activeTags.length === 0 || (p.roleTags||[]).some(t => activeTags.includes(t));
+      return matchesQ && matchesTag;
+    });
+
+    const [key,dir] = sortSel.value.split('-');
+    list.sort((a,b)=>{
+      const va = normalize(key==='role'?a.role:a.name);
+      const vb = normalize(key==='role'?b.role:b.name);
+      if(va<vb) return dir==='asc'?-1:1;
+      if(va>vb) return dir==='asc'?1:-1;
+      return 0;
+    });
+
+    grid.innerHTML = list.map(cardHTML).join('');
+    empty.hidden = list.length !== 0;
+    grid.setAttribute('aria-busy','false');
+  }
+
+  search.addEventListener('input', apply);
+  sortSel.addEventListener('change', apply);
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    const pressed = ch.getAttribute('aria-pressed') === 'true';
+    ch.setAttribute('aria-pressed', (!pressed).toString());
+    apply();
+  }));
+
+  apply();
+
   </script>
 </body>
 </html>
